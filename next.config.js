@@ -4,6 +4,13 @@ const nextConfig = {
   swcMinify: true,
   images: {
     unoptimized: true
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.mp3$/,
+      loader: 'file-loader',
+    })
+    return config
   }
 }
 
