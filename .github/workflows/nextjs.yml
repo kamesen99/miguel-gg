@@ -81,14 +81,15 @@ jobs:
           npm run build
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: "/${{ github.repository }}"
+          NEXT_PUBLIC_BASE_PATH: "/my-project"
 
       - name: Static HTML export with Next.js
         run: |
+          mkdir -p out
           npm run export
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: "/${{ github.repository }}"
+          NEXT_PUBLIC_BASE_PATH: "/my-project"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -113,4 +114,5 @@ jobs:
 #   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
 #   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
 #   trailingSlash: true, // Necessary for static site hosting like GitHub Pages
+#   distDir: 'out', // Ensure the correct output directory
 # }
