@@ -81,15 +81,8 @@ jobs:
 
       - name: Build with Next.js
         run: |
+          npm install
           npm run build
-        env:
-          NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: ""
-
-      - name: Static HTML export with Next.js
-        run: |
-          mkdir -p out
-          npm run export
         env:
           NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: ""
