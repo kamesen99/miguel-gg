@@ -43,6 +43,7 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+          mkdir -p out
           touch out/.nojekyll
 
       - name: Setup Node
