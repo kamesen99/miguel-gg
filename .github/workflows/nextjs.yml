@@ -9,6 +9,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -16,10 +19,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 21 # Ensure it matches your project's Node.js version
-
+        
       - name: Install dependencies and build
         run: |
-          npm install
+          NODE_ENV=development npm install
           npm run build
         env:
           NODE_ENV: production
