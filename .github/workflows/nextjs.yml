@@ -35,8 +35,11 @@ jobs:
         env:
           NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: "" # Set a subpath if needed
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
 
   # Deployment job
   deploy:
