@@ -5,7 +5,7 @@ const Hero = () => (
     <div className="md:w-1/2 space-y-4">
       <h1 className="text-5xl md:text-6xl font-extrabold">Miguel Pascual</h1>
       <p className="text-lg md:text-2xl">Chief Science Officer & Co-Founder at Exploration Laboratories</p>
-      <p className="mt-4 md:text-lg">Increasing humanity's access to space through technological achievements.</p>
+      <p className="mt-4 md:text-lg">Increasing humanity's access to space through innovation and collaboration.</p>
       <a
         href="#about"
         className="inline-block mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
