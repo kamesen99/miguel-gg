@@ -1,4 +1,4 @@
-import Image from 'next/image';
+//import Image from 'next/image';
 
 const Hero = () => (
   <section className="hero-section bg-gradient-to-r from-blue-900 to-purple-700 text-white p-10 md:flex md:items-center md:justify-between">
@@ -14,7 +14,7 @@ const Hero = () => (
       </a>
     </div>
     <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-      <Image
+      <img
         src="/images/hero.jpeg"
         alt="Miguel Pascual Hero"
         width={250}
