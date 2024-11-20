@@ -59,17 +59,6 @@ jobs:
 
       - name: Clear npm cache
         run: npm cache clean --force
-      # - name: Restore cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: |
-      #       .next/cache
-      #       node_modules
-      #     # Generate a new cache whenever packages or source files change.
-      #     key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-      #     # If source files changed but packages didn't, rebuild from a prior cache.
-      #     restore-keys: |
-      #       ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Install dependencies
         run: |
@@ -104,11 +93,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-# Note: Ensure that `next.config.js` is updated to include basePath
-# Example:
-# module.exports = {
-#   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-#   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
-#   trailingSlash: true, // Necessary for static site hosting like GitHub Pages
-#   distDir: 'out', // Ensure the correct output directory
-# }
