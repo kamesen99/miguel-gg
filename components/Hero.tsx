@@ -1,8 +1,8 @@
 //import Image from 'next/image';
 
 const Hero = () => (
-  <section className="hero-section bg-gradient-to-r from-blue-900 to-purple-700 text-white p-10 md:flex md:items-center md:justify-between">
-    <div className="md:w-1/2 space-y-4">
+<section className="hero-section bg-gradient-to-r from-blue-800 via-[rgba(234,179,8,0.7)] to-black text-white p-10 md:flex md:items-center md:justify-between">
+<div className="md:w-1/2 space-y-4">
       <h1 className="text-5xl md:text-6xl font-extrabold">Miguel Pascual</h1>
       <p className="text-lg md:text-2xl">Chief Science Officer & Co-Founder at Exploration Laboratories</p>
       <p className="mt-4 md:text-lg">Increasing humanity's access to space through innovation and collaboration.</p>
